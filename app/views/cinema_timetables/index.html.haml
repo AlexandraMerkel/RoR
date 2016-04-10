@@ -1,0 +1,27 @@
+%h1 Listing cinema_timetables
+
+%table
+  %thead
+    %tr
+      %th Cinema
+      %th Movie
+      %th Hall
+      %th Start
+      %th
+      %th
+      %th
+
+  %tbody
+    - @cinema_timetables.each do |cinema_timetable|
+      %tr
+        %td= cinema_timetable.cinema
+        %td= cinema_timetable.movie
+        %td= cinema_timetable.hall
+        %td= cinema_timetable.start
+        %td= link_to 'Show', cinema_timetable
+        %td= link_to 'Edit', edit_cinema_timetable_path(cinema_timetable)
+        %td= link_to 'Destroy', cinema_timetable, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Cinema timetable', new_cinema_timetable_path

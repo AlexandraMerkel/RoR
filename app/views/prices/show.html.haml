@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Cost:
+  = @price.cost
+%p
+  %b Cinema timetable:
+  = @price.cinema_timetable
+%p
+  %b Zone:
+  = @price.zone
+
+= link_to 'Edit', edit_price_path(@price)
+\|
+= link_to 'Back', prices_path

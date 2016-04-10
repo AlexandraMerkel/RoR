@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @movie.name
+%p
+  %b Min age:
+  = @movie.min_age
+%p
+  %b Genre:
+  = @movie.genre
+%p
+  %b Duration:
+  = @movie.duration
+%p
+  %b Movie company:
+  = @movie.movie_company
+
+= link_to 'Edit', edit_movie_path(@movie)
+\|
+= link_to 'Back', movies_path

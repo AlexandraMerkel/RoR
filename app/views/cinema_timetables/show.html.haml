@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Cinema:
+  = @cinema_timetable.cinema
+%p
+  %b Movie:
+  = @cinema_timetable.movie
+%p
+  %b Hall:
+  = @cinema_timetable.hall
+%p
+  %b Start:
+  = @cinema_timetable.start
+
+= link_to 'Edit', edit_cinema_timetable_path(@cinema_timetable)
+\|
+= link_to 'Back', cinema_timetables_path
