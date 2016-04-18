@@ -6,8 +6,6 @@ class CreatePeople < ActiveRecord::Migration
       t.string :second_name
       t.date :birthday, null: false
 
-      t.index [:last_name, :first_name], unique: true
-
       t.timestamps null: false
     end
   end

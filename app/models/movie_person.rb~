@@ -2,5 +2,5 @@ class MoviePerson < ActiveRecord::Base
   belongs_to :movie
   belongs_to :person
 
-  validates :role, presence: true, uniqueness: {scope: [:movie_id, :person_id]}
+  validates :movie_id, presence: true, uniqueness: {scope: :person_id}
 end

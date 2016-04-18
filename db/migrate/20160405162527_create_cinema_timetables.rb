@@ -1,8 +1,8 @@
 class CreateCinemaTimetables < ActiveRecord::Migration
   def change
     create_table :cinema_timetables do |t|
-      t.references :cinema, index: true, foreign_key: true
-      t.references :movie, index: true, foreign_key: true
+      t.references :cinema, index: true, foreign_key: true, null: false
+      t.references :movie, index: true, foreign_key: true, null: false
       t.string :hall, null: false
       t.timestamp :start, null: false
 
