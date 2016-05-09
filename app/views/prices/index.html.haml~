@@ -14,8 +14,8 @@
     - @prices.each do |price|
       %tr
         %td= price.cost
-        %td= price.cinema_timetable + price.cinema_timetable.cinema + price.cinema_timetable.movie + price.cinema_timetable.hall + price.cinema_timetable.start 
-        %td= price.zone.name 
+        %td= price.cinema_timetable
+        %td= price.zone.name
         %td= link_to 'Show', price
         %td= link_to 'Edit', edit_price_path(price)
         %td= link_to 'Destroy', price, :method => :delete, :data => { :confirm => 'Are you sure?' }

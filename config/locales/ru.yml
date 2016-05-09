@@ -1,0 +1,11 @@
+ru:
+  activerecord:
+    models:
+      people: Люди 
+    attributes:
+      person:
+        last_name: Фамилия
+        first_name: Имя
+        second_name: Отчество
+        birthday: Дата Рождения
+      

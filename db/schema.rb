@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20160405163156) do
   enable_extension "plpgsql"
 
   create_table "cinema_timetables", force: :cascade do |t|
-    t.integer  "cinema_id"
-    t.integer  "movie_id"
+    t.integer  "cinema_id",  null: false
+    t.integer  "movie_id",   null: false
     t.string   "hall",       null: false
     t.datetime "start",      null: false
     t.datetime "created_at", null: false
@@ -63,13 +63,13 @@ ActiveRecord::Schema.define(version: 20160405163156) do
 
   create_table "movie_people", force: :cascade do |t|
     t.string   "role",       null: false
-    t.integer  "movie_id"
-    t.integer  "person_id"
+    t.integer  "movie_id",   null: false
+    t.integer  "person_id",  null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "movie_people", ["movie_id", "person_id", "role"], name: "index_movie_people_on_movie_id_and_person_id_and_role", unique: true, using: :btree
+  add_index "movie_people", ["movie_id", "person_id"], name: "index_movie_people_on_movie_id_and_person_id", unique: true, using: :btree
   add_index "movie_people", ["movie_id"], name: "index_movie_people_on_movie_id", using: :btree
   add_index "movie_people", ["person_id"], name: "index_movie_people_on_person_id", using: :btree
 
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20160405163156) do
     t.integer  "min_age",          default: 0, null: false
     t.integer  "genre",                        null: false
     t.integer  "duration",                     null: false
-    t.integer  "movie_company_id"
+    t.integer  "movie_company_id",             null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
   end
@@ -95,12 +95,10 @@ ActiveRecord::Schema.define(version: 20160405163156) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "people", ["last_name", "first_name"], name: "index_people_on_last_name_and_first_name", unique: true, using: :btree
-
   create_table "prices", force: :cascade do |t|
     t.integer  "cost",                null: false
-    t.integer  "cinema_timetable_id"
-    t.integer  "zone_id"
+    t.integer  "cinema_timetable_id", null: false
+    t.integer  "zone_id",             null: false
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
   end

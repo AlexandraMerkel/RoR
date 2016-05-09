@@ -60,7 +60,6 @@ mvpr = MoviePerson.create(role: 'актёр', movie: mv5, person: pr3)
 mvpr = MoviePerson.create(role: 'актёр', movie: mv7, person: pr4)
 mvpr = MoviePerson.create(role: 'актёр', movie: mv4, person: pr5)
 mvpr = MoviePerson.create(role: 'актёр', movie: mv6, person: pr6)
-mvpr = MoviePerson.create(role: 'актёр', movie: mv8, person: pr7)
 mvpr = MoviePerson.create(role: 'режиссер', movie: mv2, person: pr8)
 mvpr = MoviePerson.create(role: 'композитор', movie: mv2, person: pr9)
 

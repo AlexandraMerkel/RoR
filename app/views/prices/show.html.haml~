@@ -5,7 +5,7 @@
   = @price.cost
 %p
   %b Cinema timetable:
-  = @price.cinema_timetable.cinema + @price.cinema_timetable.movie + @price.cinema_timetable.hall + @price.cinema_timetable.start 
+  = @price.cinema_timetable.cinema + = @price.cinema_timetable.movie + = @price.cinema_timetable.hall + = @price.cinema_timetable.start 
 %p
   %b Zone:
   = @price.zone.name

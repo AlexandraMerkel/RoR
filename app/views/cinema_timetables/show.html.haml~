@@ -2,7 +2,7 @@
 
 %p
   %b Cinema:
-  = @cinema_timetable.cinema.name
+  = @cinema_timetable.cinema
 %p
   %b Movie:
   = @cinema_timetable.movie.name

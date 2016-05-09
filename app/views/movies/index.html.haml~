@@ -19,7 +19,7 @@
         %td= movie.min_age
         %td= movie.genre
         %td= movie.duration
-        %td= movie.movie_company.name
+        %td= movie.movie_company
         %td= link_to 'Show', movie
         %td= link_to 'Edit', edit_movie_path(movie)
         %td= link_to 'Destroy', movie, :method => :delete, :data => { :confirm => 'Are you sure?' }
