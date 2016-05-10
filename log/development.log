@@ -8022,3 +8022,1058 @@ Processing by PeopleController#index as HTML
   [1m[36mPerson Load (0.2ms)[0m  [1mSELECT "people".* FROM "people"[0m
   Rendered people/index.html.haml within layouts/application (3.4ms)
 Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (31.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (15.2ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cinema_timetables'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cinemas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'countries'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'countries_movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movie_companies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.1ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movie_people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.5ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.4ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prices'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'zones'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (38.6ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Хэнкс"], ["first_name", "Том"], ["birthday", "1956-07-09"], ["created_at", "2016-05-10 06:00:42.299592"], ["updated_at", "2016-05-10 06:00:42.299592"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "МакКеллен"], ["first_name", "Иэн"], ["birthday", "1939-05-25"], ["created_at", "2016-05-10 06:00:42.388488"], ["updated_at", "2016-05-10 06:00:42.388488"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Дауни младший"], ["first_name", "Роберт"], ["birthday", "1965-04-04"], ["created_at", "2016-05-10 06:00:42.390203"], ["updated_at", "2016-05-10 06:00:42.390203"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "people" ("last_name", "first_name", "second_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["last_name", "Хабенский"], ["first_name", "Константин"], ["second_name", "Юрьевич"], ["birthday", "1972-01-11"], ["created_at", "2016-05-10 06:00:42.392914"], ["updated_at", "2016-05-10 06:00:42.392914"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Фармига"], ["first_name", "Вера"], ["birthday", "1973-08-06"], ["created_at", "2016-05-10 06:00:42.394836"], ["updated_at", "2016-05-10 06:00:42.394836"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "Тернер"], ["first_name", "Софи"], ["birthday", "1996-02-21"], ["created_at", "2016-05-10 06:00:42.396902"], ["updated_at", "2016-05-10 06:00:42.396902"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "second_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Асмус"], ["first_name", "Кристина"], ["second_name", "Игоревна"], ["birthday", "1988-04-14"], ["created_at", "2016-05-10 06:00:42.398845"], ["updated_at", "2016-05-10 06:00:42.398845"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "Нолан"], ["first_name", "Кристофер"], ["birthday", "1970-07-30"], ["created_at", "2016-05-10 06:00:42.400763"], ["updated_at", "2016-05-10 06:00:42.400763"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Циммер"], ["first_name", "Ханс"], ["birthday", "1957-09-12"], ["created_at", "2016-05-10 06:00:42.402934"], ["updated_at", "2016-05-10 06:00:42.402934"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCountry Exists (42.2ms)[0m  SELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'Россия' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCountry Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'США' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mCountry Exists (0.3ms)[0m  SELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'Канада' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (44.7ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Warner Bros. Pictures' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (14.8ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Зеленая миля' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Интерстеллар' AND "movies"."movie_company_id" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMovieCompany Exists (0.1ms)[0m  SELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'New Line Cinema' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Властелин колец: Возвращение Короля' AND "movies"."movie_company_id" IS NULL) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Заклятие' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Marvel Studios Inc.' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.4ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Мстители' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = '20th Century Fox Film Corporation' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.2ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Люди Икс: Апокалипсис' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Мармот-фильм' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Географ глобус пропил' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Базелевс Продакшн' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.1ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Ёлки' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'DreamWorks SKG ' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.2ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Поймай меня, если сможешь' AND "movies"."movie_company_id" IS NULL) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (20.8ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 10) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 10) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 11) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 12) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 13) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.1ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 14) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 15) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 16) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 17) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 18) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mCinema Exists (4.9ms)[0m  [1mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Радуга Кино' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mCinema Exists (0.1ms)[0m  SELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Люксор' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mCinema Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Формула кино' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mZone Exists (9.6ms)[0m  SELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'vip-зона' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mZone Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'первые ряды/задние ряды' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mZone Exists (0.1ms)[0m  SELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'боковые места' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+
+
+Started GET "/people/" for 127.0.0.1 at 2016-05-10 10:03:14 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.4ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 409ms (Views: 378.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cinema_timetables/" for 127.0.0.1 at 2016-05-10 10:03:27 +0400
+Processing by CinemaTimetablesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/student/RoR/temp/RoR/app/models/cinema_timetable.rb:6: syntax error, unexpected '}', expecting =>):
+  app/models/cinema_timetable.rb:6: syntax error, unexpected '}', expecting =>
+  app/controllers/cinema_timetables_controller.rb:7:in `index'
+
+
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.1ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (298.7ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (329.1ms)
+
+
+Started GET "/cinema_timetables/" for 127.0.0.1 at 2016-05-10 10:05:59 +0400
+Processing by CinemaTimetablesController#index as HTML
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown validator: 'PreseneceValidator'):
+  app/models/cinema_timetable.rb:8:in `<class:CinemaTimetable>'
+  app/models/cinema_timetable.rb:1:in `<top (required)>'
+  app/controllers/cinema_timetables_controller.rb:7:in `index'
+
+
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /opt/rubies/ruby-2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (23.5ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/student/.gem/ruby/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (46.7ms)
+
+
+Started GET "/cinema_timetables/" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+Processing by CinemaTimetablesController#index as HTML
+  [1m[36mCinemaTimetable Load (70.3ms)[0m  [1mSELECT "cinema_timetables".* FROM "cinema_timetables"[0m
+  [1m[35mCinema Load (49.5ms)[0m  SELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mMovie Load (36.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered cinema_timetables/index.html.haml within layouts/application (281.4ms)
+Completed 200 OK in 498ms (Views: 335.6ms | ActiveRecord: 159.2ms)
+
+
+Started GET "/assets/cinema_timetables.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+
+
+Started GET "/assets/cinemas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+
+
+Started GET "/assets/countries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+
+
+Started GET "/assets/movie_people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:19 +0400
+
+
+Started GET "/assets/movie_companies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/prices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/scaffolds.self-88b56f07ee663aa18eac13522f66c6d7f1daaed8b95ffaea9f73d7028a34e1a2.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/zones.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/cinema_timetables.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/cinemas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/countries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/movie_companies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/movie_people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/prices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/zones.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-10 10:06:20 +0400
+  [1m[36m (62.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (11.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCinemas (20160330173544)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (31.2ms)[0m  [1mCREATE TABLE "cinemas" ("id" serial primary key, "name" character varying NOT NULL, "address" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.4ms)[0m  CREATE UNIQUE INDEX  "index_cinemas_on_name" ON "cinemas"  ("name")
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160330173544"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Migrating to CreateMovieCompanies (20160330174906)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.4ms)[0m  CREATE TABLE "movie_companies" ("id" serial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (5.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_movie_companies_on_name" ON "movie_companies"  ("name")[0m
+  [1m[35mSQL (5.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160330174906"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCountries (20160330175207)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "countries" ("id" serial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "index_countries_on_name" ON "countries"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160330175207"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+Migrating to CreateMovies (20160331163825)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (29.8ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "name" character varying NOT NULL, "min_age" integer DEFAULT 0 NOT NULL, "genre" integer NOT NULL, "duration" integer NOT NULL, "movie_company_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE  INDEX  "index_movies_on_movie_company_id" ON "movies"  ("movie_company_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_movies_on_name_and_movie_company_id" ON "movies"  ("name", "movie_company_id")
+  [1m[36m (6.9ms)[0m  [1mALTER TABLE "movies" ADD CONSTRAINT "fk_rails_a2dbb04f8f"
+FOREIGN KEY ("movie_company_id")
+  REFERENCES "movie_companies" ("id")
+[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160331163825"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePeople (20160331164401)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "people" ("id" serial primary key, "last_name" character varying NOT NULL, "first_name" character varying NOT NULL, "second_name" character varying, "birthday" date NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160331164401"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateMoviePeople (20160331164807)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.6ms)[0m  [1mCREATE TABLE "movie_people" ("id" serial primary key, "role" character varying NOT NULL, "movie_id" integer NOT NULL, "person_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_movie_people_on_movie_id" ON "movie_people"  ("movie_id")
+  [1m[36m (2.4ms)[0m  [1mCREATE  INDEX  "index_movie_people_on_person_id" ON "movie_people"  ("person_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "index_movie_people_on_movie_id_and_person_id" ON "movie_people"  ("movie_id", "person_id")
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "movie_people" ADD CONSTRAINT "fk_rails_b086f46c2d"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "movie_people" ADD CONSTRAINT "fk_rails_9012be4f4f"
+FOREIGN KEY ("person_id")
+  REFERENCES "people" ("id")
+
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160331164807"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to CreateJoinTableMovieCountry (20160331172356)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "countries_movies" ("movie_id" integer NOT NULL, "country_id" integer NOT NULL) 
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_countries_movies_on_movie_id_and_country_id" ON "countries_movies"  ("movie_id", "country_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160331172356"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateZones (20160405161822)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (5.4ms)[0m  [1mCREATE TABLE "zones" ("id" serial primary key, "name" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "index_zones_on_name" ON "zones"  ("name")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160405161822"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+Migrating to CreateCinemaTimetables (20160405162527)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (5.1ms)[0m  CREATE TABLE "cinema_timetables" ("id" serial primary key, "cinema_id" integer NOT NULL, "movie_id" integer NOT NULL, "hall" character varying NOT NULL, "start" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_cinema_timetables_on_cinema_id" ON "cinema_timetables"  ("cinema_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE  INDEX  "index_cinema_timetables_on_movie_id" ON "cinema_timetables"  ("movie_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "index_cinema_timetables_on_cinema_id_and_hall_and_start" ON "cinema_timetables"  ("cinema_id", "hall", "start")[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "cinema_timetables" ADD CONSTRAINT "fk_rails_27a50457b6"
+FOREIGN KEY ("cinema_id")
+  REFERENCES "cinemas" ("id")
+
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "cinema_timetables" ADD CONSTRAINT "fk_rails_ee58c8dfa0"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20160405162527"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePrices (20160405163156)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "prices" ("id" serial primary key, "cost" integer NOT NULL, "cinema_timetable_id" integer NOT NULL, "zone_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE  INDEX  "index_prices_on_cinema_timetable_id" ON "prices"  ("cinema_timetable_id")
+  [1m[36m (1.6ms)[0m  [1mCREATE  INDEX  "index_prices_on_zone_id" ON "prices"  ("zone_id")[0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "index_prices_on_cinema_timetable_id_and_zone_id" ON "prices"  ("cinema_timetable_id", "zone_id")
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "prices" ADD CONSTRAINT "fk_rails_ae440153c3"
+FOREIGN KEY ("cinema_timetable_id")
+  REFERENCES "cinema_timetables" ("id")
+[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "prices" ADD CONSTRAINT "fk_rails_78c376257f"
+FOREIGN KEY ("zone_id")
+  REFERENCES "zones" ("id")
+
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20160405163156"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (4.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cinema_timetables'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'cinemas'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'countries'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.1ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'countries_movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movie_companies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movie_people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'people'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'prices'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'zones'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (14.4ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Хэнкс"], ["first_name", "Том"], ["birthday", "1956-07-09"], ["created_at", "2016-05-10 06:06:57.412955"], ["updated_at", "2016-05-10 06:06:57.412955"]]
+  [1m[35m (7.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "МакКеллен"], ["first_name", "Иэн"], ["birthday", "1939-05-25"], ["created_at", "2016-05-10 06:06:57.462456"], ["updated_at", "2016-05-10 06:06:57.462456"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Дауни младший"], ["first_name", "Роберт"], ["birthday", "1965-04-04"], ["created_at", "2016-05-10 06:06:57.464791"], ["updated_at", "2016-05-10 06:06:57.464791"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("last_name", "first_name", "second_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["last_name", "Хабенский"], ["first_name", "Константин"], ["second_name", "Юрьевич"], ["birthday", "1972-01-11"], ["created_at", "2016-05-10 06:06:57.467418"], ["updated_at", "2016-05-10 06:06:57.467418"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Фармига"], ["first_name", "Вера"], ["birthday", "1973-08-06"], ["created_at", "2016-05-10 06:06:57.469578"], ["updated_at", "2016-05-10 06:06:57.469578"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "Тернер"], ["first_name", "Софи"], ["birthday", "1996-02-21"], ["created_at", "2016-05-10 06:06:57.471183"], ["updated_at", "2016-05-10 06:06:57.471183"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "second_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["last_name", "Асмус"], ["first_name", "Кристина"], ["second_name", "Игоревна"], ["birthday", "1988-04-14"], ["created_at", "2016-05-10 06:06:57.473603"], ["updated_at", "2016-05-10 06:06:57.473603"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["last_name", "Нолан"], ["first_name", "Кристофер"], ["birthday", "1970-07-30"], ["created_at", "2016-05-10 06:06:57.475539"], ["updated_at", "2016-05-10 06:06:57.475539"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "people" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Циммер"], ["first_name", "Ханс"], ["birthday", "1957-09-12"], ["created_at", "2016-05-10 06:06:57.477799"], ["updated_at", "2016-05-10 06:06:57.477799"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCountry Exists (0.9ms)[0m  SELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'Россия' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Россия"], ["created_at", "2016-05-10 06:06:57.513280"], ["updated_at", "2016-05-10 06:06:57.513280"]]
+  [1m[35m (2.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCountry Exists (29.6ms)[0m  SELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'США' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "США"], ["created_at", "2016-05-10 06:06:57.548057"], ["updated_at", "2016-05-10 06:06:57.548057"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCountry Exists (0.8ms)[0m  SELECT  1 AS one FROM "countries" WHERE "countries"."name" = 'Канада' LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "countries" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Канада"], ["created_at", "2016-05-10 06:06:57.551262"], ["updated_at", "2016-05-10 06:06:57.551262"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMovieCompany Exists (0.5ms)[0m  SELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Warner Bros. Pictures' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Warner Bros. Pictures"], ["created_at", "2016-05-10 06:06:57.559112"], ["updated_at", "2016-05-10 06:06:57.559112"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.4ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Зеленая миля' AND "movies"."movie_company_id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Зеленая миля"], ["min_age", 16], ["genre", 5], ["duration", 189], ["movie_company_id", 1], ["created_at", "2016-05-10 06:06:57.580742"], ["updated_at", "2016-05-10 06:06:57.580742"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMovie Exists (0.2ms)[0m  SELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Интерстеллар' AND "movies"."movie_company_id" = 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'New Line Cinema' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "New Line Cinema"], ["created_at", "2016-05-10 06:06:57.865539"], ["updated_at", "2016-05-10 06:06:57.865539"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Властелин колец: Возвращение Короля' AND "movies"."movie_company_id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Властелин колец: Возвращение Короля"], ["min_age", 12], ["genre", 16], ["duration", 201], ["movie_company_id", 2], ["created_at", "2016-05-10 06:06:57.869323"], ["updated_at", "2016-05-10 06:06:57.869323"]]
+  [1m[36m (2.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Заклятие' AND "movies"."movie_company_id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Заклятие"], ["min_age", 16], ["genre", 14], ["duration", 112], ["movie_company_id", 2], ["created_at", "2016-05-10 06:06:57.874510"], ["updated_at", "2016-05-10 06:06:57.874510"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Marvel Studios Inc.' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Marvel Studios Inc."], ["created_at", "2016-05-10 06:06:57.877318"], ["updated_at", "2016-05-10 06:06:57.877318"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Мстители' AND "movies"."movie_company_id" = 3) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Мстители"], ["min_age", 12], ["genre", 15], ["duration", 142], ["movie_company_id", 3], ["created_at", "2016-05-10 06:06:57.880045"], ["updated_at", "2016-05-10 06:06:57.880045"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = '20th Century Fox Film Corporation' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "20th Century Fox Film Corporation"], ["created_at", "2016-05-10 06:06:57.882346"], ["updated_at", "2016-05-10 06:06:57.882346"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Люди Икс: Апокалипсис' AND "movies"."movie_company_id" = 4) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Люди Икс: Апокалипсис"], ["min_age", 12], ["genre", 15], ["duration", 136], ["movie_company_id", 4], ["created_at", "2016-05-10 06:06:57.884924"], ["updated_at", "2016-05-10 06:06:57.884924"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Мармот-фильм' LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Мармот-фильм"], ["created_at", "2016-05-10 06:06:57.887640"], ["updated_at", "2016-05-10 06:06:57.887640"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Географ глобус пропил' AND "movies"."movie_company_id" = 5) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Географ глобус пропил"], ["min_age", 16], ["genre", 5], ["duration", 125], ["movie_company_id", 5], ["created_at", "2016-05-10 06:06:57.891114"], ["updated_at", "2016-05-10 06:06:57.891114"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'Базелевс Продакшн' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Базелевс Продакшн"], ["created_at", "2016-05-10 06:06:57.893519"], ["updated_at", "2016-05-10 06:06:57.893519"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Ёлки' AND "movies"."movie_company_id" = 6) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Ёлки"], ["min_age", 12], ["genre", 7], ["duration", 90], ["movie_company_id", 6], ["created_at", "2016-05-10 06:06:57.895905"], ["updated_at", "2016-05-10 06:06:57.895905"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMovieCompany Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "movie_companies" WHERE "movie_companies"."name" = 'DreamWorks SKG ' LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movie_companies" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "DreamWorks SKG "], ["created_at", "2016-05-10 06:06:57.898502"], ["updated_at", "2016-05-10 06:06:57.898502"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mMovie Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "movies" WHERE ("movies"."name" = 'Поймай меня, если сможешь' AND "movies"."movie_company_id" = 7) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("name", "min_age", "genre", "duration", "movie_company_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["name", "Поймай меня, если сможешь"], ["min_age", 12], ["genre", 0], ["duration", 141], ["movie_company_id", 7], ["created_at", "2016-05-10 06:06:57.901655"], ["updated_at", "2016-05-10 06:06:57.901655"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["country_id", 2]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)  [["movie_id", 2], ["country_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)[0m  [["movie_id", 3], ["country_id", 2]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)  [["movie_id", 4], ["country_id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)[0m  [["movie_id", 5], ["country_id", 2]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)  [["movie_id", 6], ["country_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)[0m  [["movie_id", 7], ["country_id", 1]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)  [["movie_id", 8], ["country_id", 2]]
+  [1m[36m (12.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "countries_movies" ("movie_id", "country_id") VALUES ($1, $2)[0m  [["movie_id", 8], ["country_id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.3ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 1 AND "movie_people"."person_id" = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 1], ["person_id", 1], ["created_at", "2016-05-10 06:06:58.002775"], ["updated_at", "2016-05-10 06:06:58.002775"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 8 AND "movie_people"."person_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 8], ["person_id", 1], ["created_at", "2016-05-10 06:06:58.007530"], ["updated_at", "2016-05-10 06:06:58.007530"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 2 AND "movie_people"."person_id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 2], ["person_id", 2], ["created_at", "2016-05-10 06:06:58.010527"], ["updated_at", "2016-05-10 06:06:58.010527"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.4ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 4 AND "movie_people"."person_id" = 3) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 4], ["person_id", 3], ["created_at", "2016-05-10 06:06:58.013184"], ["updated_at", "2016-05-10 06:06:58.013184"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.0ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 6 AND "movie_people"."person_id" = 4) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 6], ["person_id", 4], ["created_at", "2016-05-10 06:06:58.015579"], ["updated_at", "2016-05-10 06:06:58.015579"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.2ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 3 AND "movie_people"."person_id" = 5) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 3], ["person_id", 5], ["created_at", "2016-05-10 06:06:58.018597"], ["updated_at", "2016-05-10 06:06:58.018597"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.1ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 5 AND "movie_people"."person_id" = 6) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 5], ["person_id", 6], ["created_at", "2016-05-10 06:06:58.021560"], ["updated_at", "2016-05-10 06:06:58.021560"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.1ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" = 7 AND "movie_people"."person_id" = 7) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movie_people" ("role", "movie_id", "person_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["role", "актёр"], ["movie_id", 7], ["person_id", 7], ["created_at", "2016-05-10 06:06:58.024520"], ["updated_at", "2016-05-10 06:06:58.024520"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mMoviePerson Exists (0.3ms)[0m  SELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 8) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mMoviePerson Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "movie_people" WHERE ("movie_people"."movie_id" IS NULL AND "movie_people"."person_id" = 9) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinema Exists (0.3ms)[0m  SELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Радуга Кино' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cinemas" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Радуга Кино"], ["address", "Москва, пр-т Андропова, 8"], ["created_at", "2016-05-10 06:06:58.035667"], ["updated_at", "2016-05-10 06:06:58.035667"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinema Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Люксор' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cinemas" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Люксор"], ["address", "Москва, Каширское ш., 14"], ["created_at", "2016-05-10 06:06:58.038459"], ["updated_at", "2016-05-10 06:06:58.038459"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinema Exists (0.1ms)[0m  SELECT  1 AS one FROM "cinemas" WHERE "cinemas"."name" = 'Формула кино' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cinemas" ("name", "address", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Формула кино"], ["address", "Москва, Театральный пр-д, 5"], ["created_at", "2016-05-10 06:06:58.040340"], ["updated_at", "2016-05-10 06:06:58.040340"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mZone Exists (0.5ms)[0m  SELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'vip-зона' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "zones" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "vip-зона"], ["created_at", "2016-05-10 06:06:58.048261"], ["updated_at", "2016-05-10 06:06:58.048261"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mZone Exists (0.2ms)[0m  SELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'первые ряды/задние ряды' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "zones" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "первые ряды/задние ряды"], ["created_at", "2016-05-10 06:06:58.052291"], ["updated_at", "2016-05-10 06:06:58.052291"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mZone Exists (0.1ms)[0m  SELECT  1 AS one FROM "zones" WHERE "zones"."name" = 'боковые места' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "zones" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "боковые места"], ["created_at", "2016-05-10 06:06:58.054307"], ["updated_at", "2016-05-10 06:06:58.054307"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.5ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Северная Америка' AND "cinema_timetables"."start" = '2016-05-07 10:30:00.000000' AND "cinema_timetables"."cinema_id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 1], ["movie_id", 4], ["hall", "Северная Америка"], ["start", "2016-05-07 10:30:00.000000"], ["created_at", "2016-05-10 06:06:58.066005"], ["updated_at", "2016-05-10 06:06:58.066005"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.7ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 1 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 400], ["cinema_timetable_id", 1], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.076994"], ["updated_at", "2016-05-10 06:06:58.076994"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.6ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 1 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 300], ["cinema_timetable_id", 1], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.080512"], ["updated_at", "2016-05-10 06:06:58.080512"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.0ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 1 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 250], ["cinema_timetable_id", 1], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.082675"], ["updated_at", "2016-05-10 06:06:58.082675"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Африка' AND "cinema_timetables"."start" = '2016-05-07 09:30:00.000000' AND "cinema_timetables"."cinema_id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 1], ["movie_id", 4], ["hall", "Африка"], ["start", "2016-05-07 09:30:00.000000"], ["created_at", "2016-05-10 06:06:58.086427"], ["updated_at", "2016-05-10 06:06:58.086427"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.5ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 2 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 350], ["cinema_timetable_id", 2], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.089171"], ["updated_at", "2016-05-10 06:06:58.089171"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 2 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 250], ["cinema_timetable_id", 2], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.092112"], ["updated_at", "2016-05-10 06:06:58.092112"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 2 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 2], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.094670"], ["updated_at", "2016-05-10 06:06:58.094670"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.4ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Евразия' AND "cinema_timetables"."start" = '2016-05-07 11:00:00.000000' AND "cinema_timetables"."cinema_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 1], ["movie_id", 5], ["hall", "Евразия"], ["start", "2016-05-07 11:00:00.000000"], ["created_at", "2016-05-10 06:06:58.098180"], ["updated_at", "2016-05-10 06:06:58.098180"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.3ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 3 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 400], ["cinema_timetable_id", 3], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.101351"], ["updated_at", "2016-05-10 06:06:58.101351"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.1ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 3 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 300], ["cinema_timetable_id", 3], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.103476"], ["updated_at", "2016-05-10 06:06:58.103476"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.1ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 3 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 250], ["cinema_timetable_id", 3], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.106790"], ["updated_at", "2016-05-10 06:06:58.106790"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.4ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Сатурн' AND "cinema_timetables"."start" = '2016-05-07 11:00:00.000000' AND "cinema_timetables"."cinema_id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 2], ["movie_id", 4], ["hall", "Сатурн"], ["start", "2016-05-07 11:00:00.000000"], ["created_at", "2016-05-10 06:06:58.110179"], ["updated_at", "2016-05-10 06:06:58.110179"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.6ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 4 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 500], ["cinema_timetable_id", 4], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.120197"], ["updated_at", "2016-05-10 06:06:58.120197"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.5ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 4 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 350], ["cinema_timetable_id", 4], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.123517"], ["updated_at", "2016-05-10 06:06:58.123517"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 4 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 350], ["cinema_timetable_id", 4], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.126224"], ["updated_at", "2016-05-10 06:06:58.126224"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Юпитер' AND "cinema_timetables"."start" = '2016-05-07 11:30:00.000000' AND "cinema_timetables"."cinema_id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 2], ["movie_id", 5], ["hall", "Юпитер"], ["start", "2016-05-07 11:30:00.000000"], ["created_at", "2016-05-10 06:06:58.128967"], ["updated_at", "2016-05-10 06:06:58.128967"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 5 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 500], ["cinema_timetable_id", 5], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.132586"], ["updated_at", "2016-05-10 06:06:58.132586"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.6ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 5 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 350], ["cinema_timetable_id", 5], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.135433"], ["updated_at", "2016-05-10 06:06:58.135433"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.4ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 5 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 350], ["cinema_timetable_id", 5], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.138525"], ["updated_at", "2016-05-10 06:06:58.138525"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = 'Марс' AND "cinema_timetables"."start" = '2016-05-07 10:00:00.000000' AND "cinema_timetables"."cinema_id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 2], ["movie_id", 8], ["hall", "Марс"], ["start", "2016-05-07 10:00:00.000000"], ["created_at", "2016-05-10 06:06:58.142974"], ["updated_at", "2016-05-10 06:06:58.142974"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 6 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 400], ["cinema_timetable_id", 6], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.146105"], ["updated_at", "2016-05-10 06:06:58.146105"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 6 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 250], ["cinema_timetable_id", 6], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.148888"], ["updated_at", "2016-05-10 06:06:58.148888"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.0ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 6 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 250], ["cinema_timetable_id", 6], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.151884"], ["updated_at", "2016-05-10 06:06:58.151884"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = '1-й' AND "cinema_timetables"."start" = '2016-05-07 09:00:00.000000' AND "cinema_timetables"."cinema_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 3], ["movie_id", 4], ["hall", "1-й"], ["start", "2016-05-07 09:00:00.000000"], ["created_at", "2016-05-10 06:06:58.154874"], ["updated_at", "2016-05-10 06:06:58.154874"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 7 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 300], ["cinema_timetable_id", 7], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.157819"], ["updated_at", "2016-05-10 06:06:58.157819"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.0ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 7 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 7], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.160551"], ["updated_at", "2016-05-10 06:06:58.160551"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.1ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 7 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 7], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.163610"], ["updated_at", "2016-05-10 06:06:58.163610"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.3ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = '2-й' AND "cinema_timetables"."start" = '2016-05-07 09:30:00.000000' AND "cinema_timetables"."cinema_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 3], ["movie_id", 5], ["hall", "2-й"], ["start", "2016-05-07 09:30:00.000000"], ["created_at", "2016-05-10 06:06:58.166490"], ["updated_at", "2016-05-10 06:06:58.166490"]]
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 8 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 300], ["cinema_timetable_id", 8], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.168850"], ["updated_at", "2016-05-10 06:06:58.168850"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.0ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 8 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 8], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.171684"], ["updated_at", "2016-05-10 06:06:58.171684"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 8 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 8], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.174900"], ["updated_at", "2016-05-10 06:06:58.174900"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = '3-й' AND "cinema_timetables"."start" = '2016-05-07 10:30:00.000000' AND "cinema_timetables"."cinema_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cinema_timetables" ("cinema_id", "movie_id", "hall", "start", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["cinema_id", 3], ["movie_id", 5], ["hall", "3-й"], ["start", "2016-05-07 10:30:00.000000"], ["created_at", "2016-05-10 06:06:58.177567"], ["updated_at", "2016-05-10 06:06:58.177567"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 9 AND "prices"."zone_id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 300], ["cinema_timetable_id", 9], ["zone_id", 1], ["created_at", "2016-05-10 06:06:58.180478"], ["updated_at", "2016-05-10 06:06:58.180478"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 9 AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 9], ["zone_id", 2], ["created_at", "2016-05-10 06:06:58.183556"], ["updated_at", "2016-05-10 06:06:58.183556"]]
+  [1m[35m (1.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" = 9 AND "prices"."zone_id" = 3) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "prices" ("cost", "cinema_timetable_id", "zone_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["cost", 200], ["cinema_timetable_id", 9], ["zone_id", 3], ["created_at", "2016-05-10 06:06:58.186412"], ["updated_at", "2016-05-10 06:06:58.186412"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mCinemaTimetable Exists (0.2ms)[0m  SELECT  1 AS one FROM "cinema_timetables" WHERE ("cinema_timetables"."hall" = '4-й' AND "cinema_timetables"."start" = '2016-05-07 12:00:00.000000' AND "cinema_timetables"."cinema_id" = 3) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPrice Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" IS NULL AND "prices"."zone_id" = 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mPrice Exists (0.2ms)[0m  SELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" IS NULL AND "prices"."zone_id" = 2) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mPrice Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "prices" WHERE ("prices"."cinema_timetable_id" IS NULL AND "prices"."zone_id" = 3) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+
+
+Started GET "/cinema_timetables/" for 127.0.0.1 at 2016-05-10 10:07:07 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CinemaTimetablesController#index as HTML
+  [1m[35mCinemaTimetable Load (0.5ms)[0m  SELECT "cinema_timetables".* FROM "cinema_timetables"
+  [1m[36mCinema Load (0.5ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCinema Load (0.1ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCinema Load (0.2ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "cinemas".* FROM "cinemas" WHERE "cinemas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered cinema_timetables/index.html.haml within layouts/application (61.5ms)
+Completed 200 OK in 392ms (Views: 364.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/cinema_timetables.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/countries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movie_people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movie_companies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/cinemas.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/people.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/prices.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/scaffolds.self-88b56f07ee663aa18eac13522f66c6d7f1daaed8b95ffaea9f73d7028a34e1a2.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/zones.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/cinema_timetables.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/cinemas.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/countries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movie_companies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movie_people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/people.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/prices.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/zones.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2016-05-10 10:07:08 +0400
