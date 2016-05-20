@@ -1,5 +1,7 @@
-%h1 New price
+%h1 
+  = t('helpers.new')
+  = Price.model_name.human
 
 = render 'form'
 
-= link_to 'Back', prices_path
+= link_to t('helpers.back'), prices_path

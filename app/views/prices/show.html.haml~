@@ -1,15 +1,21 @@
 %p#notice= notice
 
 %p
-  %b Cost:
+  %b 
+    = Price.human_attribute_name(:cost) + ":"
   = @price.cost
 %p
-  %b Cinema timetable:
-  = @price.cinema_timetable.cinema + = @price.cinema_timetable.movie + = @price.cinema_timetable.hall + = @price.cinema_timetable.start 
+  %b 
+    = Price.human_attribute_name(:cinema_timetable) + ":"
+  = @price.cinema_timetable.cinema 
+  = @price.cinema_timetable.movie 
+  = @price.cinema_timetable.hall 
+  = @price.cinema_timetable.start 
 %p
-  %b Zone:
+  %b 
+    = Price.human_attribute_name(:zone) + ":"
   = @price.zone.name
 
-= link_to 'Edit', edit_price_path(@price)
+= link_to t('helpers.edit'), edit_price_path(@price)
 \|
-= link_to 'Back', prices_path
+= link_to t('helpers.back'), prices_path

@@ -1,25 +1,36 @@
-%h1 Listing prices
+%h1 
+  =t('helpers.listing')
+  \:
+  =Price.model_name.human(count: 2)
 
 %table
   %thead
     %tr
-      %th Cost
-      %th Cinema timetable
-      %th Zone
+      %th= Price.human_attribute_name(:cost)
+      %th
+      %th
+      %th= Price.human_attribute_name(:cinema_timetable)
       %th
       %th
       %th
+      %th= Price.human_attribute_name(:zone)
 
   %tbody
     - @prices.each do |price|
       %tr
         %td= price.cost
-        %td= price.cinema_timetable
-        %td= price.zone.name
-        %td= link_to 'Show', price
-        %td= link_to 'Edit', edit_price_path(price)
-        %td= link_to 'Destroy', price, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= price.cinema_timetable.cinema.name
+        %td= price.cinema_timetable.movie.name
+        %td= price.cinema_timetable.hall
+        %td= price.cinema_timetable.start 
+        %td
+        %td
+        %td= price.zone.name 
+        
+        %td= link_to t('helpers.show'), price
+        %td= link_to t('helpers.edit'), edit_price_path(price)
+        %td= link_to t('helpers.destroy'), price, :method => :delete, :data => { :confirm => t('helpers.sure')  }
 
 %br
 
-= link_to 'New Price', new_price_path
+= link_to t('helpers.new') + ' ' + Price.model_name.human(count: 1), new_price_path

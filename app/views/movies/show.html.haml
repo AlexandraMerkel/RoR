@@ -1,21 +1,26 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 
+    = Movie.human_attribute_name(:name) + ":"
   = @movie.name
 %p
-  %b Min age:
+  %b 
+    = Movie.human_attribute_name(:min_age) + ":"
   = @movie.min_age
 %p
-  %b Genre:
+  %b 
+    = Movie.human_attribute_name(:genre) + ":"
   = @movie.genre
 %p
-  %b Duration:
+  %b 
+    = Movie.human_attribute_name(:duration) + ":"
   = @movie.duration
 %p
-  %b Movie company:
+  %b 
+    = Movie.human_attribute_name(:movie_company) + ":"
   = @movie.movie_company.name
 
-= link_to 'Edit', edit_movie_path(@movie)
+= link_to t('helpers.edit'), edit_movie_path(@movie)
 \|
-= link_to 'Back', movies_path
+= link_to t('helpers.back'), movies_path

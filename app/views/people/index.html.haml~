@@ -1,0 +1,30 @@
+%h1 
+  =t('helpers.listing')
+  \:
+  =Person.model_name.human(count: 2)
+
+%table
+  %thead
+    %tr
+      %th= Person.human_attribute_name(:last_name)
+      %th= Person.human_attribute_name(:first_name)
+      %th= Person.human_attribute_name(:second_name)
+      %th= Person.human_attribute_name(:birthday)
+      %th
+      %th
+      %th
+
+  %tbody
+    - @people.each do |person|
+      %tr
+        %td= person.last_name
+        %td= person.first_name
+        %td= person.second_name
+        %td= person.birthday
+        %td= link_to t('helpers.show'), person
+        %td= link_to t('helpers.show'), edit_person_path(person)
+        %td= link_to t('helpers.destroy'), person, :method => :delete, :data => { :confirm => t('helpers.sure') }
+
+%br
+
+= link_to t('helpers.new') + ' ' + Person.model_name.human(count: 1), new_person_path

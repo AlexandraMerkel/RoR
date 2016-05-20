@@ -1,4 +1,8 @@
-%h1 Listing cinema_timetables
+%h1 
+  =t('helpers.listing')
+  \:
+  =CinemaTimetable.model_name.human(count: 2)
+
 
 %table
   %thead
@@ -14,7 +18,7 @@
   %tbody
     - @cinema_timetables.each do |cinema_timetable|
       %tr
-        %td= cinema_timetable.cinema
+        %td= cinema_timetable.cinema.name
         %td= cinema_timetable.movie.name
         %td= cinema_timetable.hall
         %td= cinema_timetable.start

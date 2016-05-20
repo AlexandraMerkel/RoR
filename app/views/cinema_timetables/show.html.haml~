@@ -1,10 +1,12 @@
 %p#notice= notice
 
 %p
-  %b Cinema:
-  = @cinema_timetable.cinema
+  %b
+    = CinemaTimetable.human_attribute_name(:cinema) + ":"
+  = @cinema_timetable.cinema.name
 %p
-  %b Movie:
+  %b 
+    = CinemaTimetable.human_attribute_name(:movie) + ":"
   = @cinema_timetable.movie.name
 %p
   %b Hall:
@@ -13,6 +15,6 @@
   %b Start:
   = @cinema_timetable.start
 
-= link_to 'Edit', edit_cinema_timetable_path(@cinema_timetable)
+= link_to t('helpers.edit'), edit_cinema_timetable_path(@cinema_timetable)
 \|
-= link_to 'Back', cinema_timetables_path
+= link_to t('helpers.back'), cinema_timetables_path

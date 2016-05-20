@@ -1,9 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 
+    = MovieCompany.human_attribute_name(:name) + ":"
   = @movie_company.name
 
-= link_to 'Edit', edit_movie_company_path(@movie_company)
+= link_to t('helpers.edit'), edit_movie_company_path(@movie_company)
 \|
-= link_to 'Back', movie_companies_path
+= link_to t('helpers.back'), movie_companies_path

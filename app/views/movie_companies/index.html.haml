@@ -1,9 +1,12 @@
-%h1 Listing movie_companies
+%h1 
+  =t('helpers.listing')
+  \:
+  =MovieCompany.model_name.human(count: 2)
 
 %table
   %thead
     %tr
-      %th Name
+      %th= MovieCompany.human_attribute_name(:name)
       %th
       %th
       %th
@@ -12,10 +15,10 @@
     - @movie_companies.each do |movie_company|
       %tr
         %td= movie_company.name
-        %td= link_to 'Show', movie_company
-        %td= link_to 'Edit', edit_movie_company_path(movie_company)
-        %td= link_to 'Destroy', movie_company, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to t('helpers.show'), movie_company
+        %td= link_to t('helpers.edit'), edit_movie_company_path(movie_company)
+        %td= link_to t('helpers.destroy'), movie_company, :method => :delete, :data => { :confirm => t('helpers.sure') }
 
 %br
 
-= link_to 'New Movie company', new_movie_company_path
+= link_to t('helpers.new') + ' ' + MovieCompany.model_name.human(count: 1), new_movie_company_path

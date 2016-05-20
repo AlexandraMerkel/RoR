@@ -1,9 +1,12 @@
-%h1 Listing zones
+%h1 
+  =t('helpers.listing')
+  \:
+  =Zone.model_name.human(count: 2)
 
 %table
   %thead
     %tr
-      %th Name
+      %th= Zone.human_attribute_name(:name)
       %th
       %th
       %th
@@ -12,10 +15,10 @@
     - @zones.each do |zone|
       %tr
         %td= zone.name
-        %td= link_to 'Show', zone
-        %td= link_to 'Edit', edit_zone_path(zone)
-        %td= link_to 'Destroy', zone, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to t('helpers.show'), zone
+        %td= link_to t('helpers.edit'), edit_zone_path(zone)
+        %td= link_to t('helpers.destroy'), zone, :method => :delete, :data => { :confirm => t('helpers.sure') }
 
 %br
 
-= link_to 'New Zone', new_zone_path
+= link_to t('helpers.new') + ' ' + Zone.model_name.human(count: 1), new_zone_path

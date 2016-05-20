@@ -1,15 +1,21 @@
 %p#notice= notice
 
 %p
-  %b Role:
-  = @movie_person.role
+  %b 
+    = MoviePerson.human_attribute_name(:person) + ":"
+  = @movie_person.person.last_name 
+  = @movie_person.person.first_name 
 %p
-  %b Movie:
+  %b 
+    = MoviePerson.human_attribute_name(:movie) + ":"
   = @movie_person.movie.name
 %p
-  %b Person:
-  = @movie_person.person.last_name + @movie_person.person.first_name 
+  %b 
+    = MoviePerson.human_attribute_name(:role) + ":"
+  = @movie_person.role
 
-= link_to 'Edit', edit_movie_person_path(@movie_person)
+
+
+= link_to t('helpers.edit'), edit_movie_person_path(@movie_person)
 \|
-= link_to 'Back', movie_people_path
+= link_to t('helpers.back'), movie_people_path

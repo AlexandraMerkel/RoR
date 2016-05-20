@@ -1,12 +1,14 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 
+    = Cinema.human_attribute_name(:name) + ":"
   = @cinema.name
 %p
-  %b Address:
+  %b 
+    = Cinema.human_attribute_name(:address) + ":"
   = @cinema.address
 
-= link_to 'Edit', edit_cinema_path(@cinema)
+= link_to t('helpers.edit'), edit_cinema_path(@cinema)
 \|
-= link_to 'Back', cinemas_path
+= link_to t('helpers.back'), cinemas_path

@@ -11,10 +11,10 @@
     = f.text_field :name
   .field
     = f.label :min_age
-    = f.number_field :min_age
+    = f.select(:min_age, min_age_options(f.object.min_age))
   .field
     = f.label :genre
-    = f.number_field :genre
+    = f.select(:genre, genre_options(f.object.genre))
   .field
     = f.label :duration
     = f.number_field :duration
@@ -22,4 +22,4 @@
     = f.label :movie_company
     = f.select(:movie_company_id, movie_company_options(f.object.movie_company_id))
   .actions
-    = f.submit 'Save'
+    = f.submit

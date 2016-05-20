@@ -1,0 +1,7 @@
+%h1 Editing cinema_timetable
+
+= render 'form'
+
+= link_to 'Show', @cinema_timetable
+\|
+= link_to 'Back', cinema_timetables_path

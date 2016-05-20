@@ -1,7 +1,9 @@
-%h1 Editing movie_person
+%h1 
+  = t('helpers.editing')
+  = MoviePerson.model_name.human
 
 = render 'form'
 
-= link_to 'Show', @movie_person
+= link_to t('helpers.show'), @movie_person
 \|
-= link_to 'Back', movie_people_path
+= link_to t('helpers.back'), movie_people_path

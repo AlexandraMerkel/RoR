@@ -1,7 +1,9 @@
-%h1 Editing zone
+%h1 
+  = t('helpers.editing')
+  = Zone.model_name.human
 
 = render 'form'
 
-= link_to 'Show', @zone
+= link_to t('helpers.show'), @zone
 \|
-= link_to 'Back', zones_path
+= link_to t('helpers.back'), zones_path

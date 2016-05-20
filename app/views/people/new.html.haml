@@ -1,5 +1,7 @@
-%h1 New person
+%h1 
+  = t('helpers.new')
+  = Person.model_name.human
 
 = render 'form'
 
-= link_to 'Back', people_path
+= link_to t('helpers.back'), people_path

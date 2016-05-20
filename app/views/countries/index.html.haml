@@ -1,9 +1,12 @@
-%h1 Listing countries
+%h1
+  =t('helpers.listing')
+  \:
+  =Country.model_name.human(count: 2)
 
 %table
   %thead
     %tr
-      %th Name
+      %th= Country.human_attribute_name(:name)
       %th
       %th
       %th
@@ -12,10 +15,10 @@
     - @countries.each do |country|
       %tr
         %td= country.name
-        %td= link_to 'Show', country
-        %td= link_to 'Edit', edit_country_path(country)
-        %td= link_to 'Destroy', country, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to t('helpers.show'), country
+        %td= link_to t('helpers.edit'), edit_country_path(country)
+        %td= link_to t('helpers.destroy'), country, :method => :delete, :data => { :confirm => t('helpers.sure') }
 
 %br
 
-= link_to 'New Country', new_country_path
+= link_to t('helpers.new') + ' ' + Country.model_name.human(count: 1), new_country_path

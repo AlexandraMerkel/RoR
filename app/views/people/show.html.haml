@@ -1,18 +1,22 @@
 %p#notice= notice
 
 %p
-  %b Last name:
+  %b 
+    = Person.human_attribute_name(:last_name) + ":"
   = @person.last_name
 %p
-  %b First name:
+  %b
+    = Person.human_attribute_name(:first_name) + ":"
   = @person.first_name
 %p
-  %b Second name:
+  %b
+    = Person.human_attribute_name(:second_name) + ":"
   = @person.second_name
 %p
-  %b Birthday:
+  %b
+    = Person.human_attribute_name(:birthday) + ":"
   = @person.birthday
 
-= link_to 'Edit', edit_person_path(@person)
+= link_to t('helpers.edit'), edit_person_path(@person)
 \|
-= link_to 'Back', people_path
+= link_to t('helpers.back'), people_path

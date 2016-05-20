@@ -1,12 +1,16 @@
-%h1 Listing cinema_timetables
+%h1 
+  =t('helpers.listing')
+  \:
+  =CinemaTimetable.model_name.human(count: 2)
+
 
 %table
   %thead
     %tr
-      %th Cinema
-      %th Movie
-      %th Hall
-      %th Start
+      %th= CinemaTimetable.human_attribute_name(:cinema)
+      %th= CinemaTimetable.human_attribute_name(:movie)
+      %th= CinemaTimetable.human_attribute_name(:hall)
+      %th= CinemaTimetable.human_attribute_name(:start)
       %th
       %th
       %th
@@ -18,10 +22,10 @@
         %td= cinema_timetable.movie.name
         %td= cinema_timetable.hall
         %td= cinema_timetable.start
-        %td= link_to 'Show', cinema_timetable
-        %td= link_to 'Edit', edit_cinema_timetable_path(cinema_timetable)
-        %td= link_to 'Destroy', cinema_timetable, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to t('helpers.show'), cinema_timetable
+        %td= link_to t('helpers.edit'), edit_cinema_timetable_path(cinema_timetable)
+        %td= link_to t('helpers.destroy'), cinema_timetable, :method => :delete, :data => { :confirm => t('helpers.sure') }
 
 %br
 
-= link_to 'New Cinema timetable', new_cinema_timetable_path
+= link_to t('helpers.new') + ' ' + CinemaTimetable.model_name.human(count: 1), new_cinema_timetable_path

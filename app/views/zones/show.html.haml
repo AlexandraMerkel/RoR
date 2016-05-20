@@ -1,9 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b
+    = Zone.human_attribute_name(:name) + ":"
   = @zone.name
 
-= link_to 'Edit', edit_zone_path(@zone)
+= link_to t('helpers.edit'), edit_zone_path(@zone)
 \|
-= link_to 'Back', zones_path
+= link_to t('helpers.back'), zones_path

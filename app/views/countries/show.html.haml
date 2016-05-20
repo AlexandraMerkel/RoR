@@ -1,9 +1,10 @@
 %p#notice= notice
 
 %p
-  %b Name:
+  %b 
+    = Country.human_attribute_name(:name) + ":"
   = @country.name
 
-= link_to 'Edit', edit_country_path(@country)
+= link_to t('helpers.edit'), edit_country_path(@country)
 \|
-= link_to 'Back', countries_path
+= link_to t('helpers.back'), countries_path

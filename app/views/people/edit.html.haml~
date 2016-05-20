@@ -1,0 +1,9 @@
+%h1 Editing person
+  = t('helpers.editing')
+  = Person.model_name.human
+
+= render 'form'
+
+= link_to t('helpers.show'), @person
+\|
+= link_to t('helpers.back'), people_path

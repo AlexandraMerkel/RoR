@@ -1,13 +1,17 @@
-%h1 Listing movies
+%h1 
+  =t('helpers.listing')
+  \:
+  =Movie.model_name.human(count: 2)
+
 
 %table
   %thead
     %tr
-      %th Name
-      %th Min age
-      %th Genre
-      %th Duration
-      %th Movie company
+      %th= Movie.human_attribute_name(:name)
+      %th= Movie.human_attribute_name(:min_age)
+      %th= Movie.human_attribute_name(:genre)
+      %th= Movie.human_attribute_name(:duration)
+      %th= Movie.human_attribute_name(:movie_company)
       %th
       %th
       %th
@@ -19,11 +23,11 @@
         %td= movie.min_age
         %td= movie.genre
         %td= movie.duration
-        %td= movie.movie_company
-        %td= link_to 'Show', movie
-        %td= link_to 'Edit', edit_movie_path(movie)
-        %td= link_to 'Destroy', movie, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= movie.movie_company.name
+        %td= link_to t('helpers.show'), movie
+        %td= link_to t('helpers.edit'), edit_movie_path(movie)
+        %td= link_to t('helpers.destroy'), movie, :method => :delete, :data => { :confirm => t('helpers.sure') }
 
 %br
 
-= link_to 'New Movie', new_movie_path
+= link_to t('helpers.new') + ' ' + Movie.model_name.human(count: 1), new_movie_path

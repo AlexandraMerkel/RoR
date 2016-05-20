@@ -1,0 +1,7 @@
+%h1 
+  = t('helpers.new')
+  = CinemaTimetable.model_name.human
+
+= render 'form'
+
+= link_to ('helpers.back'), cinema_timetables_path

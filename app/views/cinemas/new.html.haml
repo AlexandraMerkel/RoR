@@ -1,5 +1,7 @@
-%h1 New cinema
+%h1 
+  = t('helpers.new')
+  = Cinema.model_name.human
 
 = render 'form'
 
-= link_to 'Back', cinemas_path
+= link_to t('helpers.back'), cinemas_path

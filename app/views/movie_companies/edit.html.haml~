@@ -1,0 +1,7 @@
+%h1 Editing movie_company
+
+= render 'form'
+
+= link_to 'Show', @movie_company
+\|
+= link_to 'Back', movie_companies_path

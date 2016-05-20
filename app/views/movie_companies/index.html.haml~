@@ -1,0 +1,24 @@
+%h1 
+  =t('helpers.listing')
+  \:
+  =MovieCompany.model_name.human(count: 2)
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th
+      %th
+      %th
+
+  %tbody
+    - @movie_companies.each do |movie_company|
+      %tr
+        %td= movie_company.name
+        %td= link_to t('helpers.show'), movie_company
+        %td= link_to t('helpers.edit'), edit_movie_company_path(movie_company)
+        %td= link_to t('helpers.destroy'), movie_company, :method => :delete, :data => { :confirm => t('helpers.sure') }
+
+%br
+
+= link_to t('helpers.new') + ' ' + MovieCompany.model_name.human(count: 1), new_movie_company_path

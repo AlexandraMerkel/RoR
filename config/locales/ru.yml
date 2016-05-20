@@ -1,11 +1,114 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
 ru:
+  helpers:
+    sure: Вы уверены?
+    submit:
+      create: Сохранить
+      submit: Сохранить
+      update: Сохранить
+    back: Назад
+    listing: Список  
+    show: Показать
+    edit: Редактировать
+    editing: Редактирование
+    destroy: Удалить
+    search: Искать
+    new: Новый
   activerecord:
     models:
-      people: Люди 
+      person:
+        one: Личность
+        few: Личности
+        many: Личности
+      movie: 
+        one: Фильм
+        few: Фильмы
+        many: Фильмы
+      movie_company: 
+        one: Кинокомпания
+        few: Кинокомпании
+        many: Кинокомпании
+      movie_person: 
+        one: Роль в фильме
+        few: Роли в фильме
+        many: Роли в фильме
+      cinema: 
+        one: Кинотеатр
+        few: Кинотеатры
+        many: Кинотеатры
+      cinema_timetable: 
+        one: Расписание сеансов
+        few: Расписания сеансов
+        many: Расписания сеансов
+      country: 
+        one: Страна
+        few: Страны
+        many: Страны
+      zone: 
+        one: Зона зала 
+        few: Зоны зала
+        many: Зоны зала
+      price: 
+        one: Цены
+        few: Цены
+        many: Цены
+    
     attributes:
       person:
         last_name: Фамилия
         first_name: Имя
         second_name: Отчество
-        birthday: Дата Рождения
-      
+        birthday: Дата рождения
+      movie: 
+        name: Название
+        min_age: Возрастное ограничение
+        genre: Жанр
+        duration: Продолжительность (мин)
+        movie_company: Кинокомпания
+      movie_company: 
+        name: Название
+      movie_person: 
+        role: Роль 
+        movie: Фильм
+        person: Личность
+      cinema: 
+        name: Название
+        address: Адрес
+      cinema_timetable: 
+        cinema: Кинотеатр
+        movie: Фильм
+        hall: Зал
+        start: Начало
+      country: 
+        name: Название
+      zone:
+        name: Название
+      price: 
+        cost: Цена
+        cinema_timetable: Расписание сеансов
+        zone: Зона
+
+       
+
+
+   

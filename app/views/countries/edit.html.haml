@@ -1,7 +1,9 @@
-%h1 Editing country
+%h1 
+  = t('helpers.editing')
+  = Country.model_name.human
 
 = render 'form'
 
-= link_to 'Show', @country
+= link_to t('helpers.show'), @country
 \|
-= link_to 'Back', countries_path
+= link_to t('helpers.back'), countries_path

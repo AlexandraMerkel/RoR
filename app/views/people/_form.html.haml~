@@ -19,4 +19,4 @@
     = f.label :birthday
     = f.date_select :birthday
   .actions
-    = f.submit 'Сохранить'
+    = f.submit 
